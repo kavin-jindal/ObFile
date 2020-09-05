@@ -12,12 +12,12 @@ try:
     from progress.spinner import Spinner
 except ImportError:
     print(Fore.RED + 'Error occured.. please try again')
+    os.system('pip install pyinstaller')
+    os.system('pip install pyarmor')
+    os.system('pip install colorama')
+    os.system('pip install pyfiglet')
 
-print(Fore.RED + "Please wait, installing modules...")
-os.system('pip install pyinstaller')
-os.system('pip install pyarmor')
-os.system('pip install colorama')
-os.system('pip install pyfiglet')
+
 
 
 os.system('cls')
