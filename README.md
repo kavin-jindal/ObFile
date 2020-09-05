@@ -66,6 +66,8 @@ You will see the program has executed..
 # Python Modules used:
 * Pyarmor
 * Pyinstaller
+* Colorama
+* Pyfiglet
 
 # Python Version Support
 * Python 3
