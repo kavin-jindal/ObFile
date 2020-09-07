@@ -106,7 +106,7 @@ while True:
                     print(Fore.YELLOW + 'Starting compiling process')
                     time.sleep(2)
                     os.system(f'pyinstaller -F -i "{icon_input}" {dir_input}')
-                    os.system('clear')
+                    os.system('cls')
                     print(Fore.RED + '\n\tCompiling process finished')
                 
                 if 'use 2' in user_input_1:
@@ -118,7 +118,7 @@ while True:
                     print(Fore.YELLOW + 'Starting compiling process')
                     time.sleep(2)
                     os.system(f'pyinstaller -F  {dir2_input}')
-                    os.system('clear')
+                    os.system('cls')
                     print(Fore.RED + '\n\tCompiling process finished')
 
                 if 'use 3' in user_input_1:
