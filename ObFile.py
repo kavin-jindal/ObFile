@@ -10,15 +10,17 @@ try:
     import sys
     import pyarmor
     from progress.spinner import Spinner
+    from tkinter import messagebox
 except ImportError:
     print(Fore.RED + 'Error occured.. please try again')
-   
+
+os.system('pip install pyinstaller')
+os.system('pip install pyarmor')
+os.system('pip install colorama')
+os.system('pip install pyfiglet')
 
 
- os.system('pip install pyinstaller')
- os.system('pip install pyarmor')
- os.system('pip install colorama')
- os.system('pip install pyfiglet'
+
 
 os.system('cls')
 
@@ -70,7 +72,6 @@ while True:
                         
             if 'use 1' in user_input:
                 print(Fore.GREEN + "Opening Compiler please wait")
-                time.sleep(1)
                 os.system('cls')
                 banner = pyfiglet.figlet_format('ObFile Compiler')
                 print(banner)
@@ -82,51 +83,39 @@ while True:
                 print(Fore.RED +   'Only .ico files are allowed for icons')
                 print(Fore.WHITE + '---------------------------------------------------') 
                 
-                print(Fore.RED + '>> Compiler Menu')
-                print(Fore.CYAN + '\t[1]Compile file with custom icon = Type use 1 ')
+                             
+                input(Fore.YELLOW + 'Press Enter to continue >>')
+                dir_input = input(Fore.YELLOW + "\n Enter correct directory of file >>")
                 print(' ')
-                print(Fore.CYAN + '\t[2]Compile file without icon = Type use 2')
+
+                print(Fore.CYAN + 'File Directory >> ' + dir_input)
                 print(' ')
-                print(Fore.CYAN + '\t[3]Quit Program = Type use 3')
-                print(' ')
-                user_input_1 = input('\n Type here >>')
-              
-                if 'use 1' in user_input_1:
-                    print(Fore.CYAN + '\nThe file will be compiled into exe with custom icon')
-                    dir_input = input(Fore.YELLOW + "\n Enter correct directory of file >>")
-                    print(' ')
-                    time.sleep(2)
-                    print(Fore.CYAN + 'File Directory >> ' + dir_input)
-                    print(' ')
+
+                user_option = input(Fore.RED + 'Do you want to add icon to your file?'
+                '\n' 'Type yes or no >> '
+                                               '')
+
+
+                if 'yes' in user_option:
+                    print(Fore.RED + 'The file will be compiled into exe with an icon')
                     icon_input = input(Fore.YELLOW + 'Enter icon directory (only .ico) >>> ')
                     print(' ')
-                    time.sleep(2)
+
                     print(Fore.CYAN + 'Icon Directory >> ' + icon_input)
                     print(' ')
                     print(Fore.YELLOW + 'Starting compiling process')
-                    time.sleep(2)
+
                     os.system(f'pyinstaller -F -i "{icon_input}" {dir_input}')
                     os.system('cls')
-                    print(Fore.RED + '\n\tCompiling process finished')
-                
-                if 'use 2' in user_input_1:
+
+                    messagebox.showinfo('ObFile', 'The file has been compiled. ')
+
+                if 'no' in user_option:
                     print(Fore.CYAN + '\n The file will compile into exe without a custom icon')
-                    dir2_input = input(Fore.YELLOW + "\n Enter correct directory of file >>")
-                    time.sleep(1)
-                    print(Fore.CYAN + '\nFile Directory >> ' + dir2_input)
-                    time.sleep(1)
-                    print(Fore.YELLOW + 'Starting compiling process')
-                    time.sleep(2)
-                    os.system(f'pyinstaller -F  {dir2_input}')
+                    os.system(f'pyinstaller -F  {dir_input}')
                     os.system('cls')
                     print(Fore.RED + '\n\tCompiling process finished')
-
-                if 'use 3' in user_input_1:
-                    print(Fore.RED + '\n Quitting program.....')
-                    time.sleep(1)
-                    print(Fore.CYAN + '\n Sorry to see you go :(')
-                    sys.exit(2)
-
+                    messagebox.showinfo('ObFile', 'The file has been compiled. ')
                 else:
                     input(Fore.CYAN + 'Press enter to continue')
                     os.system('cls')
@@ -135,7 +124,7 @@ while True:
             
             if 'use 2' in user_input:
                 print(Fore.GREEN + "Opening Obfuscator")
-                time.sleep(1)
+
                 os.system('cls')
                 banner1 = pyfiglet.figlet_format('ObFile Obfuscator')
                 print(banner1)
@@ -159,7 +148,7 @@ while True:
             
             if 'use 3' in user_input:
                 print('Running program, please wait...')
-                time.sleep(1)
+
                 os.system('cls')
                 banner2 = pyfiglet.figlet_format('Obfile')
                 print(banner2)
@@ -172,30 +161,28 @@ while True:
                 print(Fore.RED +   'Make sure to enter the correct file path and icon path')
                 print(Fore.WHITE + '--------------------------------------------------------') 
                 input(Fore.RED +   "Press to Continue >>") 
-
-                print(Fore.YELLOW + "Menu >> ")
-                print(Fore.WHITE + "\t\n [=] Add icon Type use 1")
-                print(Fore.WHITE + '\t\n [=] Compile Without icon Type use 2')
-                user_input3 = input(Fore.RED + "Type here >>")
-
-                if 'use 1' in user_input3:
-                    print(Fore.YELLOW + "The program will compile with an icon")
-                    com_dir = input(Fore.RED + '\n [=] Enter File directory >>')
-                    print(Fore.WHITE + f'\n\t File directory >> {com_dir}')
+                                       
+                             
+                com_dir = input(Fore.RED + '\n [=] Enter File directory >>')
+                print(Fore.WHITE + f'\n\t File directory >> {com_dir}')
+                icon_option = input(Fore.RED + 'Do you want to add icon to your file??'
+                    '\n' 'Type yes or no >> ')
+                if 'yes' in icon_option:
+                    print(Fore.YELLOW + 'The file will be compiled with a custom user choice icon')
                     icon_dir = input(Fore.RED + '\n [=] Enter icon directory >>')
                     print(Fore.WHITE + f'\n\t Icon Directory >> {icon_dir}')
                     print(Fore.YELLOW + "Processing.....")
-                    time.sleep(1)
+
                     print(Fore.YELLOW + "Process started")
                     os.system(f'pyarmor pack -e "--onefile --noconsole --icon {icon_dir}" {com_dir}' )
                     print(Fore.RED + 'Processing done.....')
 
-                if 'use 2' in user_input3:
+                if 'no' in icon_option:
                     print(Fore.YELLOW + "The file will compile without icon")
                     com_dir1 = input(Fore.RED + "\n [=] enter file directory >>")
-                    print(Fore.WHITE + f'\n\t File directory >> {com_dir1}')
+                    print(Fore.WHITE + f'\n\t File directory >> {com_dir}')
                     print(Fore.YELLOW + 'Processing.....')
-                    os.system(f'pyarmor pack -e " --onefile --noconsole" {com_dir1}')
+                    os.system(f'pyarmor pack -e " --onefile --noconsole" {com_dir}')
                     print(Fore.RED + "Processed.....")
                 
              
@@ -206,7 +193,7 @@ while True:
             
             if 'use 5' in user_input:
                 print("Quitting")
-                time.sleep(2)
+
                 sys.exit(2)
             
             else:
