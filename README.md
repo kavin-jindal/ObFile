@@ -35,7 +35,7 @@ It is easy to use the program.
  
  https://github.com/kavinjindal/ObFile.git
  
-**Compatible OS**
+# Compatible OS
 
 ObFile is compatible only with Windows
 
