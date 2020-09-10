@@ -1,0 +1,47 @@
+=====© Instant Devs Corp. =======================================
+======OBFile=====================================================
+
+==Update 1.1.1 ObFile===
+>> Removed Time Delays
+>> Updated Menu
+>> Fixed Bugs
+>> Fixed spaces and Indents
+>> Added popup message box system on completion
+=========================
+Program Info : 
+Version Release : 1.1.0
+OS compatibilty : Windows
+Developer : Kavin Jindal
+Developer Contact : kavinsjindal@gmail.com
+Github : kavinjindal
+
+======Program Info===============================================
+Version : 1.1.0
+Python Version: Python 3
+Compatible OS : Windows
+Release Date: 
+
+=================================================================
+ObFile is a Python Obfuscator and Compiler. 
+
+>> Functions of Obfile
+[+] Obfile can obfuscate python files
+[+] It can compile python files (.py) into exe format
+[+] You can add custom icons to the compiled python programs.
+[+] You can obfuscate and compile python files together and add 
+    icon to them.
+
+======Note========================================================
+[=] Make sure to enter correct file directory whenever 
+    you enter file directory in the program
+
+[=] The icon path should also be correct. Icons with .ico
+    extension are only supported. Make sure to have an icon
+    in a .ico format.
+
+[=] If the file directory or the icon path is wrong, the 
+    program will not execute and will show errors. 
+
+[=] The compiled or obfuscated file will be in the ObFile folder
+    in dist folder.
+==================================================================
