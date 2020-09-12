@@ -8,9 +8,11 @@ try:
     import time
     from os import system, name
     import sys
-    import pyarmor
+    from pyarmor.pyarmor import main as call_pyarmor
+
     from progress.spinner import Spinner
     from tkinter import messagebox
+
 except ImportError:
     print(Fore.RED + 'Error occured.. please try again')
 
@@ -44,7 +46,7 @@ input(Fore.RED + "Press enter to start Menu")
 
 
 
-os.system('cls')
+subprocess.call('cls', shell=True)
 
 ascii_banner = pyfiglet.figlet_format("ObFile Menu")
 print(ascii_banner)
@@ -72,7 +74,7 @@ while True:
                         
             if 'use 1' in user_input:
                 print(Fore.GREEN + "Opening Compiler please wait")
-                os.system('cls')
+                subprocess.call('cls', shell = True)
                 banner = pyfiglet.figlet_format('ObFile Compiler')
                 print(banner)
                 print(Fore.WHITE + '---------------------------------------------------') 
@@ -97,7 +99,7 @@ while True:
 
 
                 if 'yes' in user_option:
-                    print(Fore.RED + 'The file will be compiled into exe with an icon')
+                    print(Fore.RED + '\nThe file will be compiled into exe with an icon')
                     icon_input = input(Fore.YELLOW + 'Enter icon directory (only .ico) >>> ')
                     print(' ')
 
@@ -105,32 +107,35 @@ while True:
                     print(' ')
                     print(Fore.YELLOW + 'Starting compiling process')
 
-                    os.system(f'pyinstaller -F -i "{icon_input}" {dir_input}')
-                    os.system('cls')
-                    os.system("Msgbox\MsgBox.vbs")
+                    os.system(f'pyinstaller -F -i   {icon_input}   {dir_input}')
+                    
+                    subprocess.call('cls', shell=True)
+                    #os.system("Msgbox\MsgBox.vbs")
+                    messagebox.showinfo('ObFile', 'The file has been compiled. ')
+
                     input(Fore.RED + "Press to continue")
 
-                # messagebox.showinfo('ObFile', 'The file has been compiled. ')
 
                 if 'no' in user_option:
-                    print(Fore.CYAN + '\n The file will compile into exe without a custom icon')
-                    os.system(f'pyinstaller -F  {dir_input}')
-                    os.system('cls')
+                    print(Fore.CYAN + '\n\n The file will compile into exe without a custom icon')
+                    subprocess.call('pyinstaller -F' + {dir_input}, shell=True)
+                    subprocess.call('cls', shell=True)
                     print(Fore.RED + '\n\tCompiling process finished')
-                    os.system('Msgbox\MsgBox.vbs')
+                    #os.system('Msgbox\MsgBox.vbs')
+                    messagebox.showinfo('ObFile', 'The file has been compiled. ')
+
                     input(Fore.RED + "Press to continue")
 
-                    #messagebox.showinfo('ObFile', 'The file has been compiled. ')
                 else:
                     input(Fore.CYAN + 'Press enter to continue')
-                    os.system('cls')
+                    subprocess.call('cls', shell=True)
              
     
             
             if 'use 2' in user_input:
                 print(Fore.GREEN + "Opening Obfuscator")
 
-                os.system('cls')
+                subprocess.call('cls', shell=True)
                 banner1 = pyfiglet.figlet_format('ObFile Obfuscator')
                 print(banner1)
 
@@ -145,9 +150,11 @@ while True:
 
                 ob_dir = input(Fore.RED + "\n [=] Enter the file directory>> ")
                 print(Fore.WHITE + '\n Starting Compiling....')
-                os.system(f'pyarmor obfuscate {ob_dir}')
+                subprocess.call(f'pyarmor obfuscate {ob_dir}', shell=True)
                 print(Fore.WHITE + "Obfuscation Complete")
-                os.system('Msgbox\msgbox2.vbs')
+                #os.system('Msgbox\msgbox2.vbs')
+                messagebox.showinfo('ObFile', 'The file has been obfuscated successfully. ')
+
                 input(Fore.RED + "Press to continue")
                 
             
@@ -155,7 +162,7 @@ while True:
             if 'use 3' in user_input:
                 print('Running program, please wait...')
 
-                os.system('cls')
+                subprocess.call('cls', shell=True)
                 banner2 = pyfiglet.figlet_format('Obfile')
                 print(banner2)
 
@@ -180,25 +187,31 @@ while True:
                     print(Fore.YELLOW + "Processing.....")
 
                     print(Fore.YELLOW + "Process started")
-                    os.system(f'pyarmor pack -e "--onefile --noconsole --icon {icon_dir}" {com_dir}' )
+                    subprocess.call(f'pyarmor pack -e "--onefile --noconsole --icon {icon_dir}" {com_dir}', shell=True )
                     print(Fore.RED + 'Processing done.....')
-                    os.system("Msgbox\msgbox3.vbs")
+                    messagebox.showinfo('ObFile', 'The file has been Processed successfully. ')
+                    input(Fore.RED + "Press to continue")
+
+                    #os.system("Msgbox\msgbox3.vbs")
 
                 if 'no' in icon_option:
-                    print(Fore.YELLOW + "The file will compile without icon")
-                    com_dir1 = input(Fore.RED + "\n [=] enter file directory >>")
+                    print(Fore.YELLOW + "\n\nThe file will compile without icon")
+                   # com_dir1 = input(Fore.RED + "\n [=] enter file directory >>")
                     print(Fore.WHITE + f'\n\t File directory >> {com_dir}')
                     print(Fore.YELLOW + 'Processing.....')
-                    os.system(f'pyarmor pack -e " --onefile --noconsole" {com_dir}')
+                    subprocess.call(f'pyarmor pack -e " --onefile --noconsole" {com_dir}', shell=True)
                     print(Fore.RED + "Processed.....")
-                    os.system("Msgbox\msgbox3.vbs")
+                    messagebox.showinfo('ObFile', 'The file has been Processed successfully. ')
+                    input(Fore.RED + "Press to continue")
+
+                    #os.system("Msgbox\msgbox3.vbs")
 
                 
              
                
 
             if 'use 4' in user_input:
-                os.system('HELP.txt')
+                subprocess.call('HELP.txt', shell=True)
             
             if 'use 5' in user_input:
                 print("Quitting")
@@ -207,7 +220,7 @@ while True:
             
             else:
                 input(Fore.CYAN + 'Press enter to continue')
-                os.system('cls') 
+                subprocess.call('cls', shell=True) 
     user_choice_menu()
 
 
