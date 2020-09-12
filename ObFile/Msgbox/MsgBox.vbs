@@ -1,1 +1,0 @@
-x=msgbox("Your file has been compiled Successfully" ,64, "ObFile 1.1.1 ")
