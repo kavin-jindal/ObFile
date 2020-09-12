@@ -5,6 +5,11 @@ ObFile is a python compiler and obfuscator for Windows. It can compile your pyth
 
 * Released : 5/09/20
 * Last Updated : 10/09/20
+
+# Changelogs
+* Removed VBScript messageboxes
+* Updated os.system commands to `subprocess.call`
+
 # Update 1.1.1
 * Updated : 10/09/2020
 * Removed Time delay commands to enhance user-interaction
@@ -13,6 +18,7 @@ ObFile is a python compiler and obfuscator for Windows. It can compile your pyth
 * Bug fixes
 * Fixed Spaces and indents
 * Added setup file (to install all modules)
+* Updated `os.system` to `subprocess.call`
 
 # How to use it?
 It is easy to use the program. 
