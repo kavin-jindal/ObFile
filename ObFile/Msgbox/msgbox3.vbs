@@ -1,1 +1,0 @@
-x=msgbox("Your file has been compiled and obfuscated Successfully" ,64, "ObFile 1.1.1 ")
