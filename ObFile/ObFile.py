@@ -118,7 +118,7 @@ while True:
 
                 if 'no' in user_option:
                     print(Fore.CYAN + '\n\n The file will compile into exe without a custom icon')
-                    subprocess.call('pyinstaller -F' + {dir_input}, shell=True)
+                    subprocess.call(f'pyinstaller -F {dir_input}', shell=True)
                     subprocess.call('cls', shell=True)
                     print(Fore.RED + '\n\tCompiling process finished')
                     #os.system('Msgbox\MsgBox.vbs')
