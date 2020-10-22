@@ -9,8 +9,8 @@ try:
     from os import system, name
     import sys
     from pyarmor.pyarmor import main as call_pyarmor
-
     from progress.spinner import Spinner
+    import tkinter
     from tkinter import messagebox
 
 except ImportError:
@@ -18,8 +18,8 @@ except ImportError:
 
 
 
-
-
+root = tkinter.Tk()
+root.withdraw()
 
 os.system('cls')
 
@@ -152,7 +152,6 @@ while True:
                 print(Fore.WHITE + '\n Starting Compiling....')
                 subprocess.call(f'pyarmor obfuscate {ob_dir}', shell=True)
                 print(Fore.WHITE + "Obfuscation Complete")
-                #os.system('Msgbox\msgbox2.vbs')
                 messagebox.showinfo('ObFile', 'The file has been obfuscated successfully. ')
 
                 input(Fore.RED + "Press to continue")
