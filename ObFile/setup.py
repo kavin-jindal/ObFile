@@ -56,5 +56,7 @@ def download_dependencies():
     # Download Dependencies Using Pip
     command = 'python -m pip install pyinstaller pyarmor colorama pyfiglet'
     call(command)
+    os.system('Msgbox\setupmsg.vbs')
+    os.system('python ObFile.py')
 
 setup()
