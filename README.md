@@ -1,16 +1,23 @@
-![ObFile banner](https://user-images.githubusercontent.com/68228966/92695177-bb6dc080-f365-11ea-81a4-8236bf1068fb.jpg)
 
 # ObFile
-ObFile is a python compiler and obfuscator for Windows. It can compile your python programs into exe and you can even add your own custom icons to it. You can also obfuscate the files and compile them into exe.
+ObFile is a python compiler and obfuscator for Windows. It can compile your python programs into exe and you can even add your own custom icons to it. You can obfuscate your python scripts as well. 
 
 ObFile uses **PYINSTALLER** and **PYARMOR** to compile and obfuscate the python files. The credit also goes to the developers of both of these modules. 
 
 * Released : 5/09/20
-* Last Updated : 10/09/20
+* Last Updated : 28-12-10
 
 # Changelogs
-* Removed VBScript messageboxes
-* Updated os.system commands to `subprocess.call`
+* Remastered the whole program
+* Updated the UI
+* Removed the functionality to compile obfuscated python scripts (its glitchy)
+
+
+# Update 2.0.0
+* Remastered the whole program
+* Updated the UI
+* Removed the functionality to compile obfuscated python scripts (its glitchy)
+
 
 # Update 1.1.1
 * Updated : 10/09/2020
