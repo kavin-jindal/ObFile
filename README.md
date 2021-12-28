@@ -1,5 +1,5 @@
 
-# ObFile
+# ObFile [Download it here](https://drive.google.com/file/d/12cyGygLhcV5ItJ8IPsvpgEre-TGJt3aR/view?usp=sharing)
 ObFile is a python compiler and obfuscator for Windows. It can compile your python programs into exe and you can even add your own custom icons to it. You can obfuscate your python scripts as well. 
 
 ObFile uses **PYINSTALLER** and **PYARMOR** to compile and obfuscate the python files. The credit also goes to the developers of both of these modules. 
@@ -11,7 +11,7 @@ ObFile uses **PYINSTALLER** and **PYARMOR** to compile and obfuscate the python 
 * Remastered the whole program
 * Updated the UI
 * Removed the functionality to compile obfuscated python scripts (its glitchy)
-
+* Made a brand new GUI with PyQT5
 
 # Update 2.0.0
 * Remastered the whole program
@@ -29,6 +29,10 @@ ObFile uses **PYINSTALLER** and **PYARMOR** to compile and obfuscate the python 
 * Added setup file (to install all modules)
 * Updated `os.system` to `subprocess.call`
 
+# How to use
+* You can download the program from here: 
+* [Download](https://drive.google.com/file/d/12cyGygLhcV5ItJ8IPsvpgEre-TGJt3aR/view?usp=sharing)
+* If you are unable to run it, you can run the `main.py` file. 
 
  # Installation
  
@@ -38,24 +42,20 @@ ObFile uses **PYINSTALLER** and **PYARMOR** to compile and obfuscate the python 
  
 # Compatible OS
 
-ObFile is compatible only with Windows
+* Windows 10 (not tested on Windows 7, but might work)
 
 
-
-# Important
-* Make sure that the file path and icon path is correct or else, the program will show errors.
-* The output of the obfuscated or compiled python file will be stored in the Folder of the ObFile program.
 
 # Python Modules used:
 * Pyarmor
 * Pyinstaller
-* Colorama
-* Pyfiglet
+* Pyqt5
+* Pyuic5
 
 # Python Version Support
 * Python 3
 
-# Contributors:
+# Obfile v1.0.0 Contributors:
 :computer:` Vedant Bhalgama ` - helping in codes
 :computer:` TheBossProSniper ` - helping with system level programming and scripts
 
