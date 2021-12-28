@@ -13,6 +13,13 @@ ObFile uses **PYINSTALLER** and **PYARMOR** to compile and obfuscate the python 
 * Removed the functionality to compile obfuscated python scripts (its glitchy)
 * Made a brand new GUI with PyQT5
 
+# SnapShots
+
+![ob - Copy](https://user-images.githubusercontent.com/68228966/147543220-1f0cc689-b516-496a-99fc-a18ad4fe562e.JPG)
+
+![2ob](https://user-images.githubusercontent.com/68228966/147543199-a36fd03a-0ae9-4874-b7f4-6561aaf3aff3.JPG)
+
+
 # Update 2.0.0
 * Remastered the whole program
 * Updated the UI
