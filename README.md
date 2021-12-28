@@ -5,7 +5,7 @@ ObFile is a python compiler and obfuscator for Windows. It can compile your pyth
 ObFile uses **PYINSTALLER** and **PYARMOR** to compile and obfuscate the python files. The credit also goes to the developers of both of these modules. 
 
 * Released : 5/09/20
-* Last Updated : 28-12-10
+* Last Updated : 28-12-21
 
 # Changelogs
 * Remastered the whole program
